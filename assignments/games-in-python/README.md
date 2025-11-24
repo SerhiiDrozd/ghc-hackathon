@@ -1,53 +1,63 @@
-# 🎮 Hangman Game Challenge
+# 📘 Assignment: Hangman Game Challenge
 
-Build the classic word-guessing game using Python strings, loops, and user input.
+## 🎯 Objective
 
-## 📚 What You'll Learn
+Build the classic word-guessing game using Python to practice string manipulation, loops, conditionals, and user input handling. You'll create an interactive console game where players guess letters to reveal a hidden word before running out of attempts.
 
-In this assignment, you'll practice:
-- String manipulation and formatting
-- Control flow with loops and conditionals
-- Working with random selection
-- User input handling and validation
-- Game logic implementation
+## 📝 Tasks
 
-**Difficulty Level:** Intermediate  
-**Estimated Time:** 2-3 hours
+### 🛠️ Word Selection and Display
 
-## 🎯 Learning Objectives
+#### Description
+Implement the core game setup that randomly selects a word and displays it with hidden letters.
 
-By completing this challenge, you will:
-- Master string methods for character manipulation
-- Implement game state tracking with variables
-- Create interactive console applications
-- Practice debugging and testing strategies
+#### Requirements
+Completed program should:
 
-## 📋 Requirements
+- Create a list of at least 10 words for the game to choose from
+- Randomly select one word from the list using the `random` module
+- Display the word with underscores for each letter (e.g., `_ _ _ _ _` for a 5-letter word)
+- Keep track of which letters have been revealed
 
-Your Hangman game must include:
+### 🛠️ User Input and Guess Validation
 
-### Core Features
-- Randomly select a word from a predefined list
-- Display the word with underscores (`_ _ _`) for unguessed letters
-- Accept single letter guesses from the player
-- Track and display remaining incorrect attempts
-- Show previously guessed letters
-- End game when word is complete or attempts run out
-- Display appropriate win/lose messages
+#### Description
+Create a system to accept and validate player guesses, ensuring only valid single letters are processed.
 
-### Bonus Challenges (Optional)
-- Add ASCII art for the hangman drawing
-- Implement difficulty levels with different word lists
-- Allow players to guess the entire word
-- Keep score across multiple rounds
+#### Requirements
+Completed program should:
 
-## 💡 Hints
+- Prompt the player to enter a single letter guess
+- Convert input to lowercase for consistency
+- Check that the input is a single alphabetical character
+- Reject invalid inputs (numbers, symbols, multiple characters) with helpful error messages
+- Prevent players from guessing the same letter twice
 
-- Use a list to store the word's letters and track progress
-- Consider using sets to store guessed letters
-- The `random` module can help select words
-- Think about input validation (lowercase, single letters only)
+### 🛠️ Game Logic and State Tracking
 
-## 🚀 Getting Started
+#### Description
+Implement the core game mechanics that track progress, determine win/loss conditions, and update the game state.
 
-Create a new Python file and start by defining your word list. Good luck, and have fun coding! 🎉
+#### Requirements
+Completed program should:
+
+- Check if the guessed letter is in the word
+- Update the display to reveal correctly guessed letters
+- Track the number of incorrect guesses (limit to 6 attempts)
+- Maintain and display a list of previously guessed letters
+- Detect when the player has won (all letters revealed) or lost (no attempts remaining)
+- Display appropriate win or lose messages with the correct word
+
+### 🛠️ (Bonus) Enhanced Features
+
+#### Description
+Add extra features to make your Hangman game more engaging and polished.
+
+#### Requirements
+Enhanced version could include:
+
+- ASCII art that progressively draws the hangman with each wrong guess
+- Multiple difficulty levels with different word lists (easy, medium, hard)
+- Option to guess the entire word at once
+- Score tracking across multiple rounds
+- Category hints for the word (e.g., "Animal", "Food", "Country")
